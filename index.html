@@ -3,24 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Gráficos Agronómicos</title>
+    <title>Panel de Análisis Agronómico</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f6f9; color: #333; }
-        h1 { color: #2c3e50; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 15px 0; }
-        a { text-decoration: none; background: #3498db; color: white; padding: 12px 20px; border-radius: 5px; display: inline-block; font-weight: bold; transition: background 0.3s; }
-        a:hover { background: #2980b9; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2b5c8f;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .btn {
+            background-color: #337ab7;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn:hover {
+            background-color: #23527c;
+        }
     </style>
 </head>
 <body>
+
     <h1>Panel de Análisis Agronómico</h1>
-    <p>Explora a continuación los gráficos interactivos:</p>
-    <ul>
-        <li><a href="serie_tiempo_rendimiento.html" target="_blank">Evolución Temporal del Rendimiento</a></li>
-        <li><a href="barras_toneladas_anio_especie.html" target="_blank">Toneladas por Año y Especie</a></li>
-        <li><a href="funnel_area_nitrogeno_especie.html" target="_blank">Proporción de Nitrógeno por Especie</a></li>
-        <li><a href="analisis_multivariable_etapas.html" target="_blank">Análisis Multivariable por Etapas</a></li>
-    </ul>
+    <p>Explora a continuación los gráficos interactivos y análisis del proyecto:</p>
+
+    <div class="menu">
+        <a class="btn" href="lineas_evolucion_por_especie.html">📈 Evolución Temporal por Especie</a>
+        <a class="btn" href="lineas_evolucion_solo_predio_ordenado.html">📈 Evolución Temporal por Predio</a>
+        <a class="btn" href="treemap_toneladas.html">🗺️ Treemap de Toneladas Estimadas</a>
+        <a class="btn" href="barras_predio_especie.html">📊 Gráfico de Barras (Predio y Especie)</a>
+        <a class="btn" href="grafico_burbujas.html">🫧 Gráfico de Burbujas por Especie</a>
+        <a class="btn" href="grafico_burbujas_predio.html">🫧 Gráfico de Burbujas por Predio</a>
+        <a class="btn" href="scatter_correlaciones_positivas.html">↗️ Correlaciones Positivas con Regresión</a>
+        <a class="btn" href="funnel_area_nitrogeno_especie.html">📉 Análisis de Embudo / Multivariable</a>
+        <a class="btn" href="serie_tiempo_sin_escalada.html">⏱️ Serie de Tiempo General</a>
+    </div>
+
 </body>
 </html>
